@@ -1,0 +1,10 @@
+# Turn rewrite engine on
+RewriteEngine on
+
+#POST do LOGIN 
+#RewriteRule ^auth/([0-9a-zA-z$./]+) restful/restful.php?url=auth&token=$1 [L,QSA]
+RewriteRule ^auth restful.php?url=auth [L,QSA]
+RewriteRule ^search/([0-9a-zA-Z]+) restful.php?url=search&name=$1 [L,QSA]
+RewriteRule ^wine/([0-9]+) restful.php?url=wine&id=$1 [L,QSA]
+RewriteRule ^wines restful.php?url=wines [L,QSA]
+RewriteRule ^random restful.php?url=random [L,QSA]
